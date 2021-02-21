@@ -9,6 +9,7 @@ const Todo = ({text, todo, todos, setTodos}) => {
             if(item.id === todo.id){
                 return{
                     ...item, completed: !item.completed,
+                    // spreads the rest of the item and only changes complete
                 }
             }
             return item;
