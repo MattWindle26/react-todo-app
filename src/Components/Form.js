@@ -19,11 +19,14 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
         setStatus(e.target.value);
     }
 
+
+    
+
     return (
         <form>
             <input onChange={inputTextHandler} type="text" className="todo-input" value={inputText} />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                Add todo
+                <i className="fas fa-plus"></i>
             </button>
             <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">

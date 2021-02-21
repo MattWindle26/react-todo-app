@@ -137,3 +137,16 @@ select {
   transform: scale(1.5);
 }
 */
+
+
+nav{
+  background-color: #004CFF;
+  padding: 20px;
+}
+nav ul{
+  list-style-type: none;
+}
+.subnav{
+  background-color: #F8F9FA;
+  padding: 20px;
+}

@@ -1,27 +1,35 @@
 import { useState, useEffect } from "react";
 import './App.css';
 import Form from "./Components/Form";
+import Nav from "./Components/Nav";
 import TodoList from "./Components/TodoList";
 
 
 function App() {
 
 
+  let uncompletedTodos;
 
 
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [completedTodos, setcompletedTodos] = useState("0");
 
   useEffect(() => {
-    getLocalTodos()
+    getLocalTodos();
   }, []);
 
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
+    countTodos();    
   }, [todos,status]);
+
+const countTodos = () => {
+  setcompletedTodos(todos.filter(todo => todo.completed === true).length);
+}
 
 const filterHandler = () => {
   switch(status){
@@ -49,11 +57,13 @@ const getLocalTodos = () => {
   }
 }
 
-
   return (
     <div className="App">
+      <Nav />
       <header>
         <h1>Todo List</h1>
+        <p>Completed Tasks: {completedTodos}</p>
+        <p>{uncompletedTodos}</p>
       </header>
       <Form 
         todos={todos}
