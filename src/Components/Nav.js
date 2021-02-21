@@ -8,6 +8,7 @@ const Nav = () => {
             </nav>
             <div className="sub-nav">
                 <h2>Theme team</h2>
+                <a href="" className="btn">Sprint 37</a>
             </div>
         </div>
 
