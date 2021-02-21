@@ -1,4 +1,4 @@
-const Todo = ({text, todo, todos, setTodos}) => {
+const Todo = ({ text, todo, todos, setTodos, assigned}) => {
 
 
     const deleteHandler = () => {
@@ -16,15 +16,20 @@ const Todo = ({text, todo, todos, setTodos}) => {
         }))
     }
     return ( 
-        <div className="todo">
-            <li className={`todo-item ${todo.completed ? "completed" : "" } ` }>{text} </li>
+        <div className={`todoCard ${todo.completed ? " completed" : ""}`}>
+            <div className="todo-card-header">
+                <h3>{text}</h3>
+                <p>{assigned}</p>
+            </div>
+            <li className={`todo-item ${todo.completed ? "completed" : ""} `}></li>
+
+
                 <button className="complete-btn" onClick={completeHander}>
                     <i className="fas fa-check"></i>
                 </button>
                 <button className="trash-btn" onClick={deleteHandler}>
                     <i className="fas fa-trash"></i>
                 </button>
-            
         </div>
      );
 }

@@ -12,6 +12,8 @@ function App() {
 
 
   const [inputText, setInputText] = useState("");
+  const [assignText, setAssignText] = useState("");
+
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
@@ -71,6 +73,8 @@ const getLocalTodos = () => {
         setTodos={setTodos} 
         setInputText={setInputText}
         setStatus={setStatus}
+        assignText={assignText}
+        setAssignText={setAssignText}
       />
       <TodoList 
         todos={todos} 
