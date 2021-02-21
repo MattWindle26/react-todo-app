@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 10px;
 }
 body {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
 }
 header {
@@ -138,6 +139,14 @@ select {
 }
 */
 
+.btn{
+  padding: 0.5em 0.75em;
+  background-color: #004CFF;
+  color: #f1f1f1;
+  font-size: 1.6rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
 nav{
   background-color: #004CFF;
@@ -146,7 +155,18 @@ nav{
 nav ul{
   list-style-type: none;
 }
-.subnav{
+.sub-nav{
   background-color: #F8F9FA;
   padding: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.sub-nav h2{
+  font-weight: 400;
+  font-size: 2.25rem;
+}
+.sub-nav .btn{
+  margin-left: 20px;
+  font-size: 1.2rem;
 }
