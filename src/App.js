@@ -37,6 +37,7 @@ const filterHandler = () => {
   switch(status){
     case 'completed':
       setFilteredTodos(todos.filter(todo => todo.completed === true))
+      console.log(status);
       break;
     case 'uncompleted': 
       setFilteredTodos(todos.filter(todo => todo.completed === false))
@@ -61,7 +62,9 @@ const getLocalTodos = () => {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav 
+        completedTodos={completedTodos}
+      />
       <header>
         <h1>Todo List</h1>
         <p>Completed Tasks: {completedTodos}</p>

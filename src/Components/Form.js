@@ -28,7 +28,7 @@ const Form = ({
     }
 
     const statusHandler = (e) => {
-    
+        setStatus(e.target.value)
     }
 
 
@@ -43,7 +43,7 @@ const Form = ({
                 <option value="Barry Tickle">Barry Tickle</option>
             </select>
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
-                <i className="fas fa-plus"></i>
+                Add Task <i className="fas fa-plus"></i>
             </button>
             <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">

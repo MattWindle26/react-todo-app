@@ -16,12 +16,12 @@ const Todo = ({ text, todo, todos, setTodos, assigned}) => {
         }))
     }
     return ( 
-        <div className={`todoCard ${todo.completed ? " completed" : ""}`}>
+        <div className={`todoCard ${todo.completed ? " completed" : ""}`} >
             <div className="todo-card-header">
                 <h3>{text}</h3>
                 <p>{assigned}</p>
             </div>
-            <li className={`todo-item ${todo.completed ? "completed" : ""} `}></li>
+            <li className={`todo-item ${todo.completed ? "completed" : ""} `}> </li>
 
 
                 <button className="complete-btn" onClick={completeHander}>

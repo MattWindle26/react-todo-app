@@ -11,22 +11,32 @@ p,a,li,input,button,h1,h2,h3,h4,h5, option, select{
 ul{
   list-style: none;
 }
+nav ul li{
+  color: #f1f1f1;
+}
+.todo-container{
+  padding: 20px;
+}
+.todo-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
 
 .todoCard{
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 6px 12px rgba(0,0,0,0.16);
-  max-width: 400px;
   padding: 20px;
-  margin: 20px;
 }
 .todo-card-header{
   padding-bottom: 20px;
   border-bottom: 2px solid rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
 .todo-card-header h3{
-  font-size: 2.8rem;
+  font-size: 2.25rem;
   font-weight: 400;
   margin-bottom: 10px;
 }
@@ -61,4 +71,39 @@ nav ul{
 .sub-nav .btn{
   margin-left: 20px;
   font-size: 1.2rem;
+}
+
+.todoCard.completed{
+  opacity: 0.2;
+}
+
+.todoCard button{
+    background-color: #004CFF;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+}
+.todoCard button > i{
+  font-size: 1.3rem;
+}
+.todoCard button.trash-btn{
+    background-color:#ff6961;
+}
+
+
+form{
+  padding: 20px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+form input, form select,form button{
+  padding: 0.5em;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
 }
