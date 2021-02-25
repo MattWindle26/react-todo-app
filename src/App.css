@@ -113,7 +113,7 @@ nav ul{
 }
 .addTodo.show{
   opacity: 1;
-  pointer-events: none;
+  pointer-events: auto;
 }
 .addTodo h2{
   text-align: center;
