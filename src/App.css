@@ -5,7 +5,7 @@
   font-size: 10px;
 }
 
-p,a,li,input,button,h1,h2,h3,h4,h5, option, select{
+p,a,li,input,button,h1,h2,h3,h4,h5, option, select, label{
   font-size: 1.6rem;
 }
 ul{
@@ -56,6 +56,8 @@ nav{
 }
 nav ul{
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
 .sub-nav{
   background-color: #F8F9FA;
@@ -93,17 +95,55 @@ nav ul{
 }
 
 
+.addTodo{
+  position: fixed;
+  width: 500px;
+  top: 40%;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  z-index: 3;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50px);
+  transition: all 0.5s ease;
+}
+.addTodo.show{
+  opacity: 1;
+  pointer-events: none;
+}
+.addTodo h2{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
 form{
   padding: 20px;
   max-width: 500px;
   display: flex;
   flex-direction: column;
 }
+form label{
+  margin-bottom: 10px;
+}
 form input, form select,form button{
   padding: 0.5em;
   border: none;
   background: #f1f1f1;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
+}
+button[type=submit]{
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #004CFF;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

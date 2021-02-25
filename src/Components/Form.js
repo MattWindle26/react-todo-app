@@ -35,8 +35,11 @@ const Form = ({
     
 
     return (
-        <form>
+        <form class="addTodo" >
+            <h2>Add todo</h2>
+            <label >Task to add:</label>
             <input onChange={inputTextHandler} type="text" className="todo-input" value={inputText} />
+            <label >Assign task too:</label>
             <select name="assign" id="assign" onChange={assignTextHandler}>
                 <option value="" defaultValue='selected disabled' >Assign too</option>
                 <option value="Matt Windle">Matt Windle</option>
@@ -45,13 +48,13 @@ const Form = ({
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 Add Task <i className="fas fa-plus"></i>
             </button>
-            <div className="select">
+            {/* <div className="select">
                 <select onChange={statusHandler} name="todos" className="filter-todo">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
                 </select>
-            </div>
+            </div> */}
         </form>
 
     );

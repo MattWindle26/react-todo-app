@@ -10,10 +10,8 @@ function App() {
 
   let uncompletedTodos;
 
-
   const [inputText, setInputText] = useState("");
   const [assignText, setAssignText] = useState("");
-
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
@@ -65,11 +63,6 @@ const getLocalTodos = () => {
       <Nav 
         completedTodos={completedTodos}
       />
-      <header>
-        <h1>Todo List</h1>
-        <p>Completed Tasks: {completedTodos}</p>
-        <p>{uncompletedTodos}</p>
-      </header>
       <Form 
         todos={todos}
         inputText={inputText} 
