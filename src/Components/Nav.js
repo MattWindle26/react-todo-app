@@ -1,6 +1,6 @@
 import Search from "./Search";
 
-const Nav = ({ completedTodos, setStatus }) => {
+const Nav = ({ completedTodos, setStatus, todos }) => {
 
 
     const showAdd = () => {
@@ -22,6 +22,7 @@ const Nav = ({ completedTodos, setStatus }) => {
                 <a href="" className="btn">Sprint 37</a>
                 <Search 
                     setStatus={setStatus}
+                    todos={todos}
                 />
             </div>
         </div>

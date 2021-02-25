@@ -1,11 +1,9 @@
 
-const Search = ({ setStatus }
+const Search = ({ todos, setStatus }
 ) => {
-
     const statusHandler = (e) => {
         setStatus(e.target.value)
     }
-
     return (
         <form action="">
             <div className="select">

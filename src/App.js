@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
-    countTodos();    
+    countTodos();  
   }, [todos,status]);
 
 const countTodos = () => {
@@ -35,7 +35,6 @@ const filterHandler = () => {
   switch(status){
     case 'completed':
       setFilteredTodos(todos.filter(todo => todo.completed === true))
-      console.log(status);
       break;
     case 'uncompleted': 
       setFilteredTodos(todos.filter(todo => todo.completed === false))
@@ -54,7 +53,8 @@ const getLocalTodos = () => {
     localStorage.setItem('todos', JSON.stringify([]));
   }else{
     let todoLocal = JSON.parse(localStorage.getItem("todos"))
-    setTodos(todoLocal)
+    setTodos(todoLocal);
+    console.log("Todos set");
   }
 }
 
@@ -63,6 +63,7 @@ const getLocalTodos = () => {
       <Nav 
         completedTodos={completedTodos}
         setStatus={setStatus}
+        todos={todos}
       />
       <Form 
         todos={todos}
