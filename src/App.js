@@ -62,13 +62,13 @@ const getLocalTodos = () => {
     <div className="App">
       <Nav 
         completedTodos={completedTodos}
+        setStatus={setStatus}
       />
       <Form 
         todos={todos}
         inputText={inputText} 
         setTodos={setTodos} 
         setInputText={setInputText}
-        setStatus={setStatus}
         assignText={assignText}
         setAssignText={setAssignText}
       />

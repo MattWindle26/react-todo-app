@@ -1,6 +1,5 @@
 
-const Search = (
-    setStatus,
+const Search = ({ setStatus }
 ) => {
 
     const statusHandler = (e) => {

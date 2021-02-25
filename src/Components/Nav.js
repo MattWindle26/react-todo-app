@@ -1,4 +1,6 @@
-const Nav = ({ completedTodos }) => {
+import Search from "./Search";
+
+const Nav = ({ completedTodos, setStatus }) => {
 
 
     const showAdd = () => {
@@ -18,6 +20,9 @@ const Nav = ({ completedTodos }) => {
             <div className="sub-nav">
                 <h2>Todo list</h2>
                 <a href="" className="btn">Sprint 37</a>
+                <Search 
+                    setStatus={setStatus}
+                />
             </div>
         </div>
      );
